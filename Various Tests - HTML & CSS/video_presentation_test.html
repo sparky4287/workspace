@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Help Section</title>
+		<style>
+			html {
+				height: 980px;
+				background-image: url('circuits.jpg');
+				font-family: Arial;
+			}
+			body {
+				border: 2px solid white;
+				height: 730px;
+				width: 80%;
+				margin: 100px auto;
+				position: relative;
+				box-shadow: 0 0 1px black;
+				background-color: grey;
+			}
+			label {
+				font-weight: bold;
+			}
+			a {
+				color: #cc6600;
+			}
+			.container {
+			 	text-align: center;
+			 	margin: 0 auto;
+			}
+			h1 {
+				padding: 10px 0;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+				margin: 0;
+				text-shadow:2px 2px black;
+				border-bottom: 2px solid white;
+				box-shadow: 0 0 1px black inset;
+				background-color: #383838;
+			}
+			h3 {
+				color: white;
+				font-weight: bold;
+				text-shadow:2px 2px black;
+			}
+			p,h5 {
+				color: white;
+			}
+			.column_left {
+				background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+				width: 33%;
+				height: 574px;
+				float: left;
+				text-align: center;
+				border-right: 2px solid white;
+				box-shadow: 0 0 1px black inset;
+			}
+			.column_middle {
+				width: 33.5%;
+				height: 574px;
+				float: left;
+			}
+			.column_right {
+				background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+				width: 33%;
+				height: 574px;
+				float: right;
+				border-left: 2px solid white;
+				box-shadow: 0 0 1px black inset;
+			}
+			.btn_custom {
+				background: rgb(255,219,122); /* Old browsers */
+				background: -moz-linear-gradient(top,  rgba(255,219,122,1) 0%, rgba(255,208,99,1) 44%, rgba(237,167,64,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,219,122,1)), color-stop(44%,rgba(255,208,99,1)), color-stop(100%,rgba(237,167,64,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(255,219,122,1) 0%,rgba(255,208,99,1) 44%,rgba(237,167,64,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(255,219,122,1) 0%,rgba(255,208,99,1) 44%,rgba(237,167,64,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(255,219,122,1) 0%,rgba(255,208,99,1) 44%,rgba(237,167,64,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(255,219,122,1) 0%,rgba(255,208,99,1) 44%,rgba(237,167,64,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdb7a', endColorstr='#eda740',GradientType=0 ); /* IE6-9 */
+				padding: 10px;
+				-webkit-border-radius: 7px;
+				-moz-border-radius: 7px;
+				border-radius: 7px;
+				font-size: 10pt;
+				color: black;
+				text-decoration: none;
+			}
+			.btn_custom:hover {
+				background: none;
+				background-color: #cc7700;
+				color: black;
+			}
+			.custom_link {
+				font-size: 12pt;
+				color: #FEBF51;
+				text-shadow: 1px 1px #383838;
+			}
+			.custom_link:hover {
+				color: #cc6600;
+			}			
+			.mid_col_left {
+				width: 50%;
+				float: left;
+				font-size: 10pt;
+				font-weight: bold;
+				text-align: right;
+			}
+			.mid_col_mid {
+				width: 24%;
+				float: left;
+			}
+			.mid_col_right {
+				width: 24%;
+				float: left;
+			}
+			.faq_list {
+				margin: 40px 0 0 0;
+				text-align: left;
+			}
+			.title_initial {
+				margin-top: 60px;
+			}
+			.line_space {
+				padding-bottom: 8.5px;
+			}
+			.nudge_right {
+				margin: 0 20px;
+			}
+			.footer {
+				border-top: 2px solid white;
+				box-shadow: 0 0 1px black inset;
+				float: left;
+				padding: 10px;
+				height: 75px;
+				background-color: #383838;
+			}
+			.push-right {
+				float: right;
+			}
+			.return {
+				font-size: 12pt;
+				margin: -25px 10px 0 0;
+				text-decoration: none;
+				text-shadow: 1px 1px #383838;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>Welcome to the Help Section<div><a href="#" class="push-right return custom_link">Back</a></div></h1>
+		<div class="container">
+			<div class="column_left">
+				<h3><u>FAQs</u></h3>
+				<div class="faq_list">
+					<div>&nbsp;&nbsp;&nbsp;1.&nbsp;<a class="custom_link" href="help_new_user.html">How do I sign up as a new user?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;2.&nbsp;<a class="custom_link" href="#">How do I place a new order?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;3.&nbsp;<a class="custom_link" href="#">How do I edit a past order?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;4.&nbsp;<a class="custom_link" href="#">Where do I view orders?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;5.&nbsp;<a class="custom_link" href="#">Can I delete an order that has not been fulfilled?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;6.&nbsp;<a class="custom_link" href="#">Can I specify user priveleges?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;7.&nbsp;<a class="custom_link" href="#">How are prices estimated?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;8.&nbsp;<a class="custom_link" href="#">Can I add a new product?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;9.&nbsp;<a class="custom_link" href="#">Can I establish email alerts?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;10.&nbsp;<a class="custom_link" href="#">What is bleed?</a></div><br/>
+					<div>&nbsp;&nbsp;&nbsp;11.&nbsp;<a class="custom_link" href="#">Where do I report an error?</a></div>
+				</div>
+			</div>
+			<div class="column_middle">
+				<h3><u>Video Tutorials</u></h3>
+				<div class="mid_col_left">
+					<p class="title_initial line_space">New User Setup:</p>
+					<p class="line_space">Place New Order:</p>
+					<p class="line_space">Edit Past Order:</p>
+					<p class="line_space">View Orders:</p>
+					<p class="line_space">Delete Order in Progress:</p>
+					<p class="line_space">Specify User Options:</p>
+					<p class="line_space">Use Pricing Estimator:</p>
+					<p class="line_space">Adding a New Product:</p>
+					<p class="line_space">Establishing Email Contacts:</p>
+					<p class="line_space">Specifying Variable Options:</p>
+					<p class="line_space">Reporting an Error:</p>
+				</div>
+				<div class="mid_col_mid">
+					<h5>New Tab</h5>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video1</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video2</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video3</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video4</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video5</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video6</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video7</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video8</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video9</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video10</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" target="_blank">Video11</a><br/><br/>
+				</div>
+				<div class="mid_col_right">
+					<h5>New Window</h5>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video1</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video2</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video3</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video4</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video5</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video6</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video7</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video8</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video9</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video10</a><br/><br/>
+					<a class="btn_custom" href="Prelim.ogv" onclick="window.open('Prelim.ogv', 'newwindow', 'width=500, height=500'); return false;">Video11</a><br/><br/>
+				</div>
+			</div>
+			<div class="column_right">
+				<h3><u>Contact Information</u></h3><br/>
+				<p><label>Phone:</label><br/>
+				(Click to Call if Using Mobile Device)</p>
+				<a href="tel:9162564670,42" class="custom_link">(916) 256-4670 ex.42</a><br/><br/>
+				<p><label>Fax:</label><br/><br/>
+				(666) 666-6666</p>
+			</div>
+			<div class="footer">
+				<p class="nudge_right" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;We are dedicated to providing a quality, efficient system and are constantly looking for ways to improve. If you have any suggestions as to how we can improve the performance of this application, or have any questions that are not answered within this help program, please <a class="custom_link" href="mailto:jonathans@capitalmail.net?subject=Admin Help">email an administrator</a> and we will get back to you within 24 hours.</p>
+				<p>Developed by Capital Mailing Services</p>
+			</div>
+		</div>
+	</body>
+</html>
