@@ -153,36 +153,43 @@ public class BattleSim{
 			case 1:
 				hit = rand.nextInt(2);
 				if(hit == 1){
-					int attack = rand.nextInt(character.getPower()-(int)(character.getPower()*0.75)) + (int)(character.getPower()*0.75+1);
-					enemy.setLife_Pts(enemy.getLife_Pts() - attack);
-					System.out.println(character.getName() + " struck " + enemy.getName() + " for " + attack + " points!");
+					successAttack(character,enemy);
 				} else {
-					System.out.println(character.getName() + " missed striking " + enemy.getName() + ".");
+					failAttack(character,enemy);
 				}
 				break;
 			case 2:
 				hit = rand.nextInt(1);
 				if(hit == 0){
-					int attack = rand.nextInt(character.getPower()-(int)(character.getPower()*0.75)) + (int)(character.getPower()*0.75+1);
-					enemy.setLife_Pts(enemy.getLife_Pts() - attack);
-					System.out.println(character.getName() + " struck " + enemy.getName() + " for " + attack + " points!");
+					successAttack(character,enemy);
 				} else {
-					System.out.println(character.getName() + " missed striking " + enemy.getName() + ".");
+					failAttack(character,enemy);
 				}
 				break;
 			case 3:
 				hit = rand.nextInt(4);
 				if(hit != 3){
-					int attack = rand.nextInt(character.getPower()-(int)(character.getPower()*0.75)) + (int)(character.getPower()*0.75+1);
-					enemy.setLife_Pts(enemy.getLife_Pts() - attack);
-					System.out.println(character.getName() + " struck " + enemy.getName() + " for " + attack + " points!");
+					successAttack(character,enemy);
 				} else {
-					System.out.println(character.getName() + " missed striking " + enemy.getName() + ".");
+					failAttack(character,enemy);
 				}
 				break;
 			default:
 				break;
 		}
+	}
+
+	/* Calculates a Successful Attack's Damage Done to Enemy */
+	public static void successAttack(Hero character, Enemy enemy){
+		Random rand = new Random();
+		int attack = rand.nextInt(character.getPower()-(int)(character.getPower()*0.75)) + (int)(character.getPower()*0.75+1);
+		enemy.setLife_Pts(enemy.getLife_Pts() - attack);
+		System.out.println(character.getName() + " struck " + enemy.getName() + " for " + attack + " points!");
+	}
+
+	/* Prints the Fail Attack Message */
+	public static void failAttack(Hero character, Enemy enemy){
+		System.out.println(character.getName() + " missed striking " + enemy.getName() + ".");
 	}
 
 	/* Calculate Hero's Tech Based on Class */
