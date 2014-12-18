@@ -27,7 +27,6 @@ public class BattleSim{
 		System.out.println();
 		System.out.println("Choose a class: (Warrior(1), Ranger(2), or Wizard(3))");
 		char_class = in.nextInt();
-		enem_class = rand.nextInt(3)+1;
 		in.nextLine();
 		System.out.println("Enter your character's name: ");
 		name = in.nextLine();
@@ -59,6 +58,7 @@ public class BattleSim{
 		/* Character and Opponent Creation */
 		Hero character = new Hero(name, char_class, life_pts, tech_pts, power, hit_rate);
 		Enemy enemy = new Enemy();
+		enem_class = rand.nextInt(3)+1;
 		switch(enem_class){
 			case 1:
 				enemy = new Enemy(enem_class, 1000, 50, 200, 50);
