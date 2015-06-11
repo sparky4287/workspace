@@ -111,14 +111,20 @@ public class BattleSim{
 						break;
 				}
 			}
+
+			/* If enemy has no life points after character action, declare victory and break while loop */
 			if(enemy.getLife_Pts() <= 0){
 				System.out.println(character.getName() + " killed the mighty " + enemy.getName() + "!");
 				System.out.println(character);
 				System.out.println(enemy);
 				break;
 			}
+
+			/* Enemy attack */
 			enemyAttack(character, enemy);
 			System.out.println(character);
+
+			/* If character has no life points after enemy action, declare defeat and break while loop */
 			if(character.getLife_Pts() <= 0){
 				System.out.println(character.getName() + " was slain by the mighty " + enemy.getName() + "!");
 				System.out.println(character);
@@ -129,7 +135,7 @@ public class BattleSim{
 		} while(character.getLife_Pts() != 0 || enemy.getLife_Pts() != 0);
 	}
 
-	/* Choice menu with "Attack" only as of now */
+	/* Character orders menu */
 	public static int menu(Hero character, Enemy enemy, Scanner in, boolean heal){
 		System.out.println("***************************");
 		System.out.println("* Choose action:          *");
