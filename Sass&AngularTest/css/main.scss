@@ -131,3 +131,26 @@ html, body {
         margin: 0 10px;
     }
 }
+.circle-container {
+    @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em); 
+    margin: 5em auto 0;
+    border: solid 5px tomato;
+
+    img {
+        display: block; 
+        max-width: 100%; 
+        border-radius: 50%;
+        filter: grayscale(100%);
+        border: solid 5px tomato;
+        transition: .15s;
+
+        &:hover,
+        &:active {
+            filter: grayscale(0);
+        }
+    }
+}
+.test-gradient {
+    height: 20px;
+    @include stripes(to right, #8e44ad #2c3e50 #2980b9 #16a085 #27ae60);
+}
