@@ -41,7 +41,7 @@ app.controller('MainController', ['$scope', function($scope) {
             {
                 name: 'City',
                 thumb: 'http://lorempixel.com/100/100/city',
-                description: '\'City\''
+                description: 'City'
             },
             {
                 name: 'Nature',
@@ -79,6 +79,10 @@ app.controller('MainController', ['$scope', function($scope) {
                 description: 'People doing stuff for things'
             }
         ];
+    $scope.setMaster =
+        function(preview) {
+            $scope.selected = preview;
+        }
     $scope.plusOne = 
         function(index) {
             $scope.products[index].likes += 1;

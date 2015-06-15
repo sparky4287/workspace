@@ -39,18 +39,10 @@
         		</div>
       		</div>
 			<ul class='circle-container'>
-				<!-- <li ng-repeat="preview in previews">
-					<img ng-src='{{ preview.thumb }}' alt="{{ preview.name }}" ng-mouseover="desc = 'Butts'"/>
-				</li> -->
-				<li ng-mouseover="desc = 'City'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/city' alt="..." /></li>
-				<li ng-mouseover="desc = 'Nature?'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/nature' alt="..." /></li>
-				<li ng-mouseover="desc = 'I don\'t know, but it\'s called \'Abstract\'...'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/abstract' alt="..." /></li>
-				<li ng-mouseover="desc = 'Cats and shit'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/cats' alt="..." /></li>
-				<li ng-mouseover="desc = 'Food'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/food' alt="..." /></li>
-				<li ng-mouseover="desc = 'Random animals'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/animals' alt="..." /></li>
-				<li ng-mouseover="desc = 'Ha! Business...'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/business' alt="..." /></li>
-				<li ng-mouseover="desc = 'People doing stuff for things'" ng-init="desc=''"><img src='http://lorempixel.com/100/100/people' alt="..." /></li>
-				<li class="image-circle-description">{{ desc }}</li>
+				<li ng-repeat="preview in previews">
+					<img ng-src='{{ preview.thumb }}' alt="{{ preview.name }}" ng-mouseover="setMaster(preview)"/>
+				</li>
+				<li class="image-circle-description">{{ selected.description }}</li>
 			</ul>
     	</div>
 

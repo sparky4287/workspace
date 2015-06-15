@@ -154,3 +154,10 @@ html, body {
     height: 20px;
     @include stripes(to right, #8e44ad #2c3e50 #2980b9 #16a085 #27ae60);
 }
+.image-circle-description {
+    text-align: center;
+    padding: auto;
+    padding-top: 1em;
+    background: ghostwhite;
+    
+}
