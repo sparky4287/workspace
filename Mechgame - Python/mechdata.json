@@ -1,0 +1,74 @@
+{
+	"mechs": [
+		{
+			"id": 1,
+		    "name": "wasp",
+		    "mass": 20,
+		    "endo_steel": false,
+		    "power_plant": 120,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 0,
+		    "jump_distance": 0,
+		    "ferro_fibrous": false,
+		    "armor_mass": 3,
+		    "armor_factor": 48,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false
+		},
+		{
+			"id": 2,
+		    "name": "locust",
+		    "mass": 20,
+		    "endo_steel": false,
+		    "power_plant": 120,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 0,
+		    "jump_distance": 0,
+		    "ferro_fibrous": false,
+		    "armor_mass": 3,
+		    "armor_factor": 48,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false
+		},
+		{
+			"id": 3,
+		    "name": "jenner",
+		    "mass": 20,
+		    "endo_steel": false,
+		    "power_plant": 120,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 0,
+		    "jump_distance": 0,
+		    "ferro_fibrous": false,
+		    "armor_mass": 3,
+		    "armor_factor": 48,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false
+		},
+		{
+			"id": 4,
+		    "name": "cicada",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 120,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 0,
+		    "jump_distance": 0,
+		    "ferro_fibrous": false,
+		    "armor_mass": 3,
+		    "armor_factor": 48,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false
+		}
+	]
+}
+
+	
