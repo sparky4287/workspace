@@ -46,7 +46,7 @@ Notes:
 Purpose: Class constructor for Mechs
 Notes:
 	- Preliminary initialization finished
-	- (TODO) Need accessors and mutators
+	- Preliminary accessors and mutators finished
 	- (TODO) Need basic action methods defined
 
 |------------|
