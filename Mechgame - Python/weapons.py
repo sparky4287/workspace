@@ -1,36 +1,89 @@
 """ Weapon Construction """
 class Weapon(object):
-    def __init__(self, name, wtype, criticals, mass, heat, damage, min_range, short_range, med_range, long_range):
+    def __init__(self, _id, name, mass, wtype, criticals, heat, damage, ammo_mult, min_r, short_r, med_r, long_r, extreme_r):
+        self._id = _id
         self.name = name
-        self.wtype = wtype              """1=ballistic, 2=missile, 3=energy"""
-        self.criticals = criticals
         self.mass = mass
+        self.wtype = wtype
+        self.criticals = criticals
         self.heat = heat
         self.damage = damage
-        self.min_range = min_range
-        self.short_range = short_range
-        self.med_range = med_range
-        self.long_range = long_range
+        self.ammo_mult = ammo_mult
+        self.min_r = min_r
+        self.short_r = short_r
+        self.med_r = med_r
+        self.long_r = long_r
+        self.extreme_r = extreme_r
 
-""" Ballistic Weapon Code Construction """
-machine_gun = Weapon("Machine Gun",1,1,)
-ac_2 = Weapon("Autocannon-2",1)
-ac_5 = Weapon("Autocannon-5",1)
-ac_10 = Weapon("Autocannon-10",1)
-ac_20 = Weapon("Autocannon-20",1)
+    ### Mutators ###
+    def setId(self, _id):
+        self._id = _id
+    def setName(self, name):
+        self.name = name
+    def setMass(self, mass):
+        self.mass = mass
+    def setWType(self, wtype):
+        self.wtype = wtype
+    def setCriticals(self, criticals):
+        self.criticals = criticals
+    def setHeat(self, heat):
+        self.heat = heat
+    def setDamage(self, damage):
+        self.damage = damage
+    def setAmmoMult(self, ammo_mult):
+        self.ammo_mult = ammo_mult
+    def setMinRange(self, min_r):
+        self.min_r = min_r
+    def setShortRange(self, short_r):
+        self.short_r = short_r
+    def setMedRange(self, med_r):
+        self.med_r = med_r
+    def setLongRange(self, long_r):
+        self.long_r = long_r
+    def setExtremeRange(self, extreme_r):
+        self.extreme_r = extreme_r
 
-""" Missile Weapon Code Construction """
-srm_2 = Weapon("SRM 2",2)
-srm_4 = Weapon("SRM 4",2)
-srm_6 = Weapon("SRM 6",2)
-lrm_5 = Weapon("LRM 5",2)
-lrm_10 = Weapon("LRM 10",2)
-lrm_15 = Weapon("LRM 15",2)
-lrm_20 = Weapon("LRM 20",2)
+    ### Accessors ###
+    def getId(self):
+        return self._id
+    def getName(self):
+        return self.name
+    def getMass(self):
+        return self.mass
+    def getWType(self):
+        return self.wtype
+    def getCriticals(self):
+        return self.criticals
+    def getHeat(self):
+        return self.heat
+    def getDamage(self):
+        return self.damage
+    def getAmmoMult(self):
+        return self.ammo_mult
+    def getMinRange(self):
+        return self.min_r
+    def getShortRange(self):
+        return self.short_r
+    def getMedRange(self):
+        return self.med_r
+    def getLongRange(self):
+        return self.long_r
+    def getExtremeRange(self):
+        return self.extreme_r
 
-""" Energy Weapon Code Construction """
-flamer = Weapon("Flamer",3,1,)
-sm_laser = Weapon("Small Laser",3,1,.5,)
-md_laser = Weapon("Medium Laser",3,1,1,)
-lg_laser = Weapon("Large Laser",3,2,5,)
-ppc = Weapon("PPC",3,3,7,10,10,)
+    def __str__(self):
+        return "\n*******************************" + \
+            "\n*        Weapon Stats         *" + \
+            "\n*******************************" + \
+            "\nType:\t\t" + self.getName().title() + \
+            "\nMass:\t\t" + str(self.getMass()) + " tons" + \
+            "\nType:\t" + str(self.getWType()) + \
+            "\nCriticals:\t" + str(self.getCriticals()) + \
+            "\nHeat:\t" + str(self.getHeat()) + \
+            "\nDamage:\t" + str(self.getDamage()) + \
+            "\nAmmo Multiplier:\t" + str(self.getAmmoMult()) + \
+            "\nMinimum Range:\t" + str(self.getMinRange()) + \
+            "\nShort Range:\t\t" + str(self.getShortRange()) + \
+            "\nMedium Range:\t" + str(self.getMedRange()) + \
+            "\nLong Range:\t" + str(self.getLongRange()) + \
+            "\nExtreme Range:\t" + str(self.getExtremeRange())

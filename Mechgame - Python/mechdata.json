@@ -121,7 +121,7 @@
 		    "jump_jets": 2,
 		    "jump_distance": 2,
 		    "ferro_fibrous": false,
-		    "armor_mass": 6,
+		    "armor_mass": 6.0,
 		    "armor_factor": 96,
 		    "heat_sinks": 11,
 		    "dbl_heat_sinks": false
@@ -211,7 +211,7 @@
 		    "jump_jets": 0,
 		    "jump_distance": 0,
 		    "ferro_fibrous": false,
-		    "armor_mass": 3,
+		    "armor_mass": 3.0,
 		    "armor_factor": 48,
 		    "heat_sinks": 10,
 		    "dbl_heat_sinks": true

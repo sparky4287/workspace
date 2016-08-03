@@ -88,42 +88,22 @@ class Mech(object):
 
     def __str__(self):
 
-        # Can be refactored?
-        if self.getEndoSteel() == True:
-            endoDisplay = "\nChassis:\tEndo Steel"
-        else:
-            endoDisplay = "\nChassis:\tStandard"
-
-        # Can be refactored?
-        if self.getXL() == True:
-            engineDisplay = "\nPower Plant:\t" + str(self.getPowerPlant()) + " (XL)"
-        else:
-            engineDisplay = "\nPower Plant:\t" + str(self.getPowerPlant()) + " (Standard)"
-
-        # Can be refactored?
-        if self.getFerroFibrous() == True:
-            ferroDisplay = "\nArmor:\t\tFerro Fibrous"
-        else:
-            ferroDisplay = "\nArmor:\t\tStandard"
-
-        # Can be refactored?
-        if self.getDblHeatSinks() == True:
-            heatSinkDisplay = "\nHeat Sinks:\t" + str(self.getHeatSinks()) + "(" + str(self.getHeatSinks()*2) + ")"
-        else:
-            heatSinkDisplay = "\nHeat Sinks:\t" + str(self.getHeatSinks())
+        # Grab values through tuple implementation
+        ferro_fibrous = ("Standard", "Ferro Fibrous")[self.getFerroFibrous()]
+        chassis = ("Standard", "Endo Steel")[self.getEndoSteel()]
+        power_plant = ("Standard", "XL")[self.getXL()]
+        heat_sinks = (str(self.getHeatSinks()), str(self.getHeatSinks()) + "(" + str(self.getHeatSinks()*2) + ")")[self.getDblHeatSinks()]
 
         return "\n*******************************" + \
-            "\n***       Mech Stats        ***" + \
+            "\n*         Mech Stats          *" + \
             "\n*******************************" + \
             "\nType:\t\t" + self.getModel() + " " + self.getName().title() + \
-            "\nMass:\t\t" + str(self.getMass()) + \
-            endoDisplay + \
-            engineDisplay + \
+            "\nMass:\t\t" + str(self.getMass()) + " tons" + \
+            "\nChassis:\t" + ferro_fibrous + \
+            "\nPower Plant:\t" + str(self.getPowerPlant()) + " " + power_plant + \
             "\nWalking Speed:\t" + str(self.getWalkingSpeed()) + \
             "\nRunning Speed:\t" + str(self.getRunningSpeed()) + \
-            "\nJump Jets:\t" + str(self.getJumpJets()) + \
             "\nJump Distance:\t" + str(self.getJumpDistance()) + \
-            ferroDisplay + \
+            "\nArmor:\t\t" + str(self.getArmorFactor()) + " " + ferro_fibrous + \
             "\nArmor Mass:\t" + str(self.getArmorMass()) + " tons" + \
-            "\nArmor Factor:\t" + str(self.getArmorFactor()) + \
-            heatSinkDisplay
+            "\nHeat Sinks:\t" + heat_sinks

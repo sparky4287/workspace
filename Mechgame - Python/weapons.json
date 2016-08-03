@@ -1,0 +1,19 @@
+{"weapons":[
+	{"_id":1,"name":"machine gun","mass":0.5,"wtype":"ba","criticals":1,"heat":0,"damage":2,"ammo_mult":200,"min_r":0,"short_r":1,"med_r":2,"long_r":3,"extreme_r":4},
+	{"_id":2,"name":"autocannon 2","mass":6,"wtype":"ba","criticals":1,"heat":1,"damage":2,"ammo_mult":45,"min_r":4,"short_r":8,"med_r":16,"long_r":24,"extreme_r":32},
+	{"_id":3,"name":"autocannon 5","mass":8,"wtype":"ba","criticals":4,"heat":1,"damage":5,"ammo_mult":20,"min_r":3,"short_r":6,"med_r":12,"long_r":18,"extreme_r":24},
+	{"_id":4,"name":"autocannon 10","mass":12,"wtype":"ba","criticals":7,"heat":3,"damage":10,"ammo_mult":10,"min_r":0,"short_r":5,"med_r":10,"long_r":15,"extreme_r":20},
+	{"_id":5,"name":"autocannon 20","mass":14,"wtype":"ba","criticals":10,"heat":7,"damage":20,"ammo_mult":5,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12},
+	{"_id":6,"name":"flamer","mass":1,"wtype":"en","criticals":1,"heat":3,"damage":2,"ammo_mult":0,"min_r":0,"short_r":1,"med_r":2,"long_r":3,"extreme_r":4},
+	{"_id":7,"name":"small laser","mass":0.5,"wtype":"en","criticals":1,"heat":1,"damage":3,"ammo_mult":0,"min_r":0,"short_r":1,"med_r":2,"long_r":3,"extreme_r":4},
+	{"_id":8,"name":"medium laser","mass":1,"wtype":"en","criticals":1,"heat":3,"damage":5,"ammo_mult":0,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12},
+	{"_id":9,"name":"large laser","mass":5,"wtype":"en","criticals":2,"heat":8,"damage":8,"ammo_mult":0,"min_r":0,"short_r":5,"med_r":10,"long_r":15,"extreme_r":20},
+	{"_id":10,"name":"PPC","mass":14,"wtype":"en","criticals":10,"heat":7,"damage":20,"ammo_mult":0,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12},
+	{"_id":11,"name":"LRM 5","mass":2,"wtype":"mi","criticals":1,"heat":2,"damage":1,"ammo_mult":24,"min_r":6,"short_r":7,"med_r":14,"long_r":21,"extreme_r":28},
+	{"_id":12,"name":"LRM 10","mass":5,"wtype":"mi","criticals":2,"heat":4,"damage":1,"ammo_mult":12,"min_r":6,"short_r":7,"med_r":14,"long_r":21,"extreme_r":28},
+	{"_id":13,"name":"LRM 15","mass":7,"wtype":"mi","criticals":3,"heat":5,"damage":1,"ammo_mult":8,"min_r":6,"short_r":7,"med_r":14,"long_r":21,"extreme_r":28},
+	{"_id":14,"name":"LRM 20","mass":10,"wtype":"mi","criticals":5,"heat":6,"damage":1,"ammo_mult":6,"min_r":6,"short_r":7,"med_r":14,"long_r":21,"extreme_r":28},
+	{"_id":15,"name":"SRM 2","mass":1,"wtype":"mi","criticals":1,"heat":2,"damage":2,"ammo_mult":50,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12},
+	{"_id":16,"name":"SRM 4","mass":2,"wtype":"mi","criticals":1,"heat":3,"damage":2,"ammo_mult":25,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12},
+	{"_id":17,"name":"SRM 6","mass":3,"wtype":"mi","criticals":2,"heat":4,"damage":2,"ammo_mult":15,"min_r":0,"short_r":3,"med_r":6,"long_r":9,"extreme_r":12}
+]}

@@ -1,39 +1,6 @@
 import simplejson as json
 from mechs import Mech
 
-def displayMech(Mech):
-    print ("\n*******************************")
-    print ("***       Mech Stats        ***")
-    print ("*******************************")
-    print("Type:\t\t%s %s" % (playerMech.getModel(), playerMech.getName().title()))
-    print("Mass:\t\t%d" % playerMech.getMass())
-    # Can be refactored?
-    if playerMech.getEndoSteel() == True:
-        print("Chassis:\tEndo Steel")
-    else:
-        print("Chassis:\tStandard")
-    # Can be refactored?
-    if playerMech.getXL() == True:
-        print("Power Plant:\t%d (XL)" % playerMech.getPowerPlant())
-    else:
-        print("Power Plant:\t%d (Standard)" % playerMech.getPowerPlant())
-    print("Walking Speed:\t%d" % playerMech.getWalkingSpeed())
-    print("Running Speed:\t%d" % playerMech.getRunningSpeed())
-    print("Jump Jets:\t%d" % playerMech.getJumpJets())
-    print("Jump Distance:\t%d" % playerMech.getJumpDistance())
-    # Can be refactored?
-    if playerMech.getFerroFibrous() == True:
-        print("Armor:\t\tFerro Fibrous")
-    else:
-        print("Armor:\t\tStandard")
-    print("Armor Mass:\t%.1f tons" % playerMech.getArmorMass())
-    print("Armor Factor:\t%d" % playerMech.getArmorFactor())
-    # Can be refactored?
-    if playerMech.getDblHeatSinks() == True:
-        print("Heat Sinks:\t%d(%d)" % (playerMech.getHeatSinks(), playerMech.getHeatSinks()*2))
-    else:
-        print("Heat Sinks:\t%d" % playerMech.getHeatSinks())
-
 file_dir = "mechdata.json"
 valid = True
 found = False
