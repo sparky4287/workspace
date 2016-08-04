@@ -199,7 +199,7 @@
 		    "dbl_heat_sinks": false
 		},
 		{
-			"_id": 20,
+			"_id": 19,
 			"model": "CDA-2A",
 		    "name": "cicada",
 		    "mass": 40,
