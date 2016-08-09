@@ -5,6 +5,7 @@ mech_file_dir = "mechdata.json"
 weapons_file_dir = "weapons.json"
 valid = True
 found = False
+count = 0
 
 with open(mech_file_dir) as mech_file:
     mdata = json.load(mech_file)
@@ -45,8 +46,32 @@ while valid:
                         print(item)
             for key, val in wIDs.items():
                 if val:
+                    # print(key,len(val))
                     for item in val:
-                        print(key,item)
+                        # print(item)
+                        # print(count)
+                        # print(key,item)
+                        # for result in wdata['weapons']:
+                        #     if result['_id'] == val:
+                        #         weapons[key][count] = Weapon(
+                        #             result['_id'],
+                        #             result['name'],
+                        #             result['mass'],
+                        #             result['wtype'],
+                        #             result['criticals'],
+                        #             result['heat'],
+                        #             result['damage'],
+                        #             result['ammo_mult'],
+                        #             result['min_r'],
+                        #             result['short_r'],
+                        #             result['med_r'],
+                        #             result['long_r'],
+                        #             result['extreme_r'])
+                        #     print(weapons[key][count])
+                        count=count+1
+                    # print("1")
+                    count=0
+
             found = True
             valid = False
     if found is not True:
