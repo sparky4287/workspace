@@ -3,7 +3,7 @@
 		{
 			"_id": 1,
 			"model": "WSP-1A",
-		    "name": "wasp",
+		    "name": "WASP",
 		    "mass": 20,
 		    "endo_steel": false,
 		    "power_plant": 120,
@@ -16,12 +16,22 @@
 		    "armor_mass": 3.0,
 		    "armor_factor": 48,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+		    "w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [8],
+	    		"ll": [15],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 2,
 			"model": "LCT-1V",
-		    "name": "locust",
+		    "name": "LOCUST",
 		    "mass": 20,
 		    "endo_steel": false,
 		    "power_plant": 160,
@@ -34,12 +44,22 @@
 		    "armor_mass": 4.0,
 		    "armor_factor": 64,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [8],
+	    		"rt": [],
+	    		"la": [1],
+	    		"ra": [1],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 3,
 			"model": "STG-3R",
-		    "name": "stinger",
+		    "name": "STINGER",
 		    "mass": 20,
 		    "endo_steel": false,
 		    "power_plant": 120,
@@ -52,12 +72,22 @@
 		    "armor_mass": 3.0,
 		    "armor_factor": 48,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [],
+	    		"rt": [],
+	    		"la": [1],
+	    		"ra": [1,8],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 4,
 			"model": "COM-2D",
-		    "name": "commando",
+		    "name": "COMMANDO",
 		    "mass": 25,
 		    "endo_steel": false,
 		    "power_plant": 150,
@@ -70,12 +100,22 @@
 		    "armor_mass": 4.0,
 		    "armor_factor": 64,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [17],
+	    		"rt": [],
+	    		"la": [8],
+	    		"ra": [16],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 5,
 			"model": "JVN-10N",
-		    "name": "javelin",
+		    "name": "JAVELIN",
 		    "mass": 30,
 		    "endo_steel": false,
 		    "power_plant": 180,
@@ -88,12 +128,22 @@
 		    "armor_mass": 3.0,
 		    "armor_factor": 48,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [17],
+	    		"ct": [],
+	    		"rt": [17],
+	    		"la": [],
+	    		"ra": [],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 6,
 			"model": "SDR-5V",
-		    "name": "spider",
+		    "name": "SPIDER",
 		    "mass": 30,
 		    "endo_steel": false,
 		    "power_plant": 240,
@@ -106,12 +156,22 @@
 		    "armor_mass": 3.5,
 		    "armor_factor": 56,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [8,8],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 7,
 			"model": "UM-R60",
-		    "name": "urbanmech",
+		    "name": "URBANMECH",
 		    "mass": 30,
 		    "endo_steel": false,
 		    "power_plant": 60,
@@ -124,12 +184,22 @@
 		    "armor_mass": 6.0,
 		    "armor_factor": 96,
 		    "heat_sinks": 11,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [],
+	    		"rt": [],
+	    		"la": [7],
+	    		"ra": [4],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 8,
 			"model": "VLK-QA",
-		    "name": "valkyrie",
+		    "name": "VALKYRIE",
 		    "mass": 30,
 		    "endo_steel": false,
 		    "power_plant": 150,
@@ -142,12 +212,22 @@
 		    "armor_mass": 6.0,
 		    "armor_factor": 96,
 		    "heat_sinks": 11,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [12],
+	    		"ct": [],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [8],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 9,
 			"model": "FS9-H",
-		    "name": "firestarter",
+		    "name": "FIRESTARTER",
 		    "mass": 35,
 		    "endo_steel": false,
 		    "power_plant": 210,
@@ -160,12 +240,22 @@
 		    "armor_mass": 5.5,
 		    "armor_factor": 88,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [1],
+	    		"ct": [6,6],
+	    		"rt": [1],
+	    		"la": [6,8],
+	    		"ra": [6,8],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 10,
 			"model": "JR7-D",
-		    "name": "jenner",
+		    "name": "JENNER",
 		    "mass": 35,
 		    "endo_steel": false,
 		    "power_plant": 245,
@@ -178,12 +268,22 @@
 		    "armor_mass": 4.0,
 		    "armor_factor": 64,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [16],
+	    		"rt": [],
+	    		"la": [8,8],
+	    		"ra": [8,8],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
 			"_id": 11,
 			"model": "OTT-7J",
-		    "name": "ostscout",
+		    "name": "OSTSCOUT",
 		    "mass": 35,
 		    "endo_steel": false,
 		    "power_plant": 280,
@@ -196,25 +296,241 @@
 		    "armor_mass": 4.5,
 		    "armor_factor": 72,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": false
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [8],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		},
 		{
-			"_id": 19,
-			"model": "CDA-2A",
-		    "name": "cicada",
+			"_id": 12,
+			"model": "PNT-9R",
+		    "name": "PANTHER",
+		    "mass": 35,
+		    "endo_steel": false,
+		    "power_plant": 140,
+		    "xl": false,
+		    "walking_speed": 4,
+		    "running_speed": 6,
+		    "jump_jets": 4,
+		    "jump_distance": 4,
+		    "ferro_fibrous": false,
+		    "armor_mass": 6.5,
+		    "armor_factor": 104,
+		    "heat_sinks": 13,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [16],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [10],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 13,
+			"model": "ASN-21",
+		    "name": "ASSASSIN",
 		    "mass": 40,
 		    "endo_steel": false,
-		    "power_plant": 120,
+		    "power_plant": 280,
+		    "xl": false,
+		    "walking_speed": 7,
+		    "running_speed": 11,
+		    "jump_jets": 7,
+		    "jump_distance": 7,
+		    "ferro_fibrous": false,
+		    "armor_mass": 4.5,
+		    "armor_factor": 72,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [15],
+	    		"ct": [],
+	    		"rt": [11],
+	    		"la": [],
+	    		"ra": [8],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 14,
+			"model": "CDA-2A",
+		    "name": "CICADA",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 320,
+		    "xl": false,
+		    "walking_speed": 8,
+		    "running_speed": 12,
+		    "jump_jets": 0,
+		    "jump_distance": 0,
+		    "ferro_fibrous": false,
+		    "armor_mass": 4.0,
+		    "armor_factor": 64,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [8],
+	    		"ct": [7],
+	    		"rt": [8],
+	    		"la": [],
+	    		"ra": [],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 15,
+			"model": "CLNT-2-3T",
+		    "name": "CLINT",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 240,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 6,
+		    "jump_distance": 6,
+		    "ferro_fibrous": false,
+		    "armor_mass": 4.5,
+		    "armor_factor": 72,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [8],
+	    		"ct": [8],
+	    		"rt": [],
+	    		"la": [],
+	    		"ra": [3],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 16,
+			"model": "HER-2S",
+		    "name": "HERMES II",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 240,
 		    "xl": false,
 		    "walking_speed": 6,
 		    "running_speed": 9,
 		    "jump_jets": 0,
 		    "jump_distance": 0,
 		    "ferro_fibrous": false,
-		    "armor_mass": 3.0,
-		    "armor_factor": 48,
+		    "armor_mass": 7.5,
+		    "armor_factor": 120,
 		    "heat_sinks": 10,
-		    "dbl_heat_sinks": true
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [],
+	    		"ct": [],
+	    		"rt": [3],
+	    		"la": [6],
+	    		"ra": [8],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 17,
+			"model": "VL-2T",
+		    "name": "VULCAN",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 240,
+		    "xl": false,
+		    "walking_speed": 6,
+		    "running_speed": 9,
+		    "jump_jets": 6,
+		    "jump_distance": 6,
+		    "ferro_fibrous": false,
+		    "armor_mass": 5.0,
+		    "armor_factor": 80,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [8],
+	    		"ct": [],
+	    		"rt": [2],
+	    		"la": [1],
+	    		"ra": [6],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 18,
+			"model": "WTH-1",
+		    "name": "WHITWORTH",
+		    "mass": 40,
+		    "endo_steel": false,
+		    "power_plant": 160,
+		    "xl": false,
+		    "walking_speed": 4,
+		    "running_speed": 6,
+		    "jump_jets": 4,
+		    "jump_distance": 4,
+		    "ferro_fibrous": false,
+		    "armor_mass": 8.0,
+		    "armor_factor": 128,
+		    "heat_sinks": 10,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [8],
+	    		"lt": [12],
+	    		"ct": [],
+	    		"rt": [12],
+	    		"la": [8],
+	    		"ra": [8],
+	    		"ll": [],
+	    		"rl": []
+		    }
+		},
+		{
+			"_id": 19,
+			"model": "BJ-1",
+		    "name": "BLACKJACK",
+		    "mass": 45,
+		    "endo_steel": false,
+		    "power_plant": 180,
+		    "xl": false,
+		    "walking_speed": 4,
+		    "running_speed": 6,
+		    "jump_jets": 4,
+		    "jump_distance": 4,
+		    "ferro_fibrous": false,
+		    "armor_mass": 8.5,
+		    "armor_factor": 136,
+		    "heat_sinks": 11,
+		    "dbl_heat_sinks": false,
+	    	"w_and_e": {
+	    		"head": [],
+	    		"lt": [8],
+	    		"ct": [],
+	    		"rt": [8],
+	    		"la": [8,2],
+	    		"ra": [8,2],
+	    		"ll": [],
+	    		"rl": []
+		    }
 		}
 	]
 }

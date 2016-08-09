@@ -1,6 +1,6 @@
 """ Mech Construction """
 class Mech(object):
-    def __init__(self, _id, model, name, mass, endo_steel, power_plant, xl, walking_speed, running_speed, jump_jets, jump_distance, ferro_fibrous, armor_mass, armor_factor, heat_sinks, dbl_heat_sinks):
+    def __init__(self,_id,model,name,mass,endo_steel,power_plant,xl,walking_speed,running_speed,jump_jets,jump_distance,ferro_fibrous,armor_mass,armor_factor,heat_sinks,dbl_heat_sinks,w_and_e):
         self._id = _id
         self.model = model
         self.name = name
@@ -17,6 +17,7 @@ class Mech(object):
         self.armor_factor = armor_factor
         self.heat_sinks = heat_sinks
         self.dbl_heat_sinks = dbl_heat_sinks
+        self.w_and_e = w_and_e
 
     ### Mutators ###
     def setId(self, _id):
@@ -51,6 +52,8 @@ class Mech(object):
         self.heat_sinks = heat_sinks
     def setDblHeatSinks(self, dbl_heat_sinks):
         self.dbl_heat_sinks = dbl_heat_sinks
+    def setWandE(self, w_and_e):
+        self.w_and_e = w_and_e
 
     ### Accessors ###
     def getId(self):
@@ -85,6 +88,8 @@ class Mech(object):
         return self.heat_sinks
     def getDblHeatSinks(self):
         return self.dbl_heat_sinks
+    def getWandE(self):
+        return self.w_and_e
 
     def __str__(self):
 
@@ -106,4 +111,5 @@ class Mech(object):
             "\nJump Distance:\t" + str(self.getJumpDistance()) + \
             "\nArmor:\t\t" + str(self.getArmorFactor()) + " " + ferro_fibrous + \
             "\nArmor Mass:\t" + str(self.getArmorMass()) + " tons" + \
-            "\nHeat Sinks:\t" + heat_sinks
+            "\nHeat Sinks:\t" + heat_sinks + \
+            "\nWeapons/Equipment:\n" + str(self.getWandE())

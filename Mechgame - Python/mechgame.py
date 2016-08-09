@@ -1,20 +1,21 @@
 import simplejson as json
 from mechs import Mech
 
-file_dir = "mechdata.json"
+mech_file_dir = "mechdata.json"
+weapons_file_dir = "weapons.json"
 valid = True
 found = False
 
-with open(file_dir) as data_file:
-    data = json.load(data_file)
+with open(mech_file_dir) as mech_file:
+    mdata = json.load(mech_file)
 
-for item in data['mechs']:
-    print(item['name'].title())
+for item in mdata['mechs']:
+    print(item['name'])
 
 while valid:
     newPlayerMech = input("\nChoose Mech: ")
-    newPlayerMech = newPlayerMech.lower()
-    for result in data['mechs']:
+    newPlayerMech = newPlayerMech.upper()
+    for result in mdata['mechs']:
         if result['name'] == newPlayerMech:
             playerMech = Mech(
                 result['_id'],
@@ -32,9 +33,20 @@ while valid:
                 result['armor_mass'],
                 result['armor_factor'],
                 result['heat_sinks'],
-                result['dbl_heat_sinks'])
+                result['dbl_heat_sinks'],
+                result['w_and_e'])
             print("\n...Mech construction successful...")
-            print(playerMech)
+            wIDs = playerMech.getWandE()
+            with open(weapons_file_dir) as weapon_file:
+                wdata = json.load(weapon_file)
+            for key,value in wdata.items():
+                for item in value:
+                    if item['_id'] is 8:
+                        print(item)
+            for key, val in wIDs.items():
+                if val:
+                    for item in val:
+                        print(key,item)
             found = True
             valid = False
     if found is not True:
