@@ -15,33 +15,42 @@ class Weapon(object):
         self.long_r = long_r
         self.extreme_r = extreme_r
 
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self,name):
+        self.__name = name
+    
+
     ### Mutators ###
-    def setId(self, _id):
-        self._id = _id
-    def setName(self, name):
-        self.name = name
-    def setMass(self, mass):
-        self.mass = mass
-    def setWType(self, wtype):
-        self.wtype = wtype
-    def setCriticals(self, criticals):
-        self.criticals = criticals
-    def setHeat(self, heat):
-        self.heat = heat
-    def setDamage(self, damage):
-        self.damage = damage
-    def setAmmoMult(self, ammo_mult):
-        self.ammo_mult = ammo_mult
-    def setMinRange(self, min_r):
-        self.min_r = min_r
-    def setShortRange(self, short_r):
-        self.short_r = short_r
-    def setMedRange(self, med_r):
-        self.med_r = med_r
-    def setLongRange(self, long_r):
-        self.long_r = long_r
-    def setExtremeRange(self, extreme_r):
-        self.extreme_r = extreme_r
+    # def setId(self, _id):
+    #     self._id = _id
+    # def setName(self, name):
+    #     self.name = name
+    # def setMass(self, mass):
+    #     self.mass = mass
+    # def setWType(self, wtype):
+    #     self.wtype = wtype
+    # def setCriticals(self, criticals):
+    #     self.criticals = criticals
+    # def setHeat(self, heat):
+    #     self.heat = heat
+    # def setDamage(self, damage):
+    #     self.damage = damage
+    # def setAmmoMult(self, ammo_mult):
+    #     self.ammo_mult = ammo_mult
+    # def setMinRange(self, min_r):
+    #     self.min_r = min_r
+    # def setShortRange(self, short_r):
+    #     self.short_r = short_r
+    # def setMedRange(self, med_r):
+    #     self.med_r = med_r
+    # def setLongRange(self, long_r):
+    #     self.long_r = long_r
+    # def setExtremeRange(self, extreme_r):
+    #     self.extreme_r = extreme_r
 
     ### Accessors ###
     def getId(self):

@@ -23,31 +23,36 @@ while valid:
     for result in mdata['mechs']:
         if result['name'] == newPlayerMech:
             playerMech = Mech(
-                result['_id'],
-                result['model'],
-                result['name'],
-                result['mass'],
-                result['endo_steel'],
-                result['power_plant'],
-                result['xl'],
-                result['walking_speed'],
-                result['running_speed'],
-                result['jump_jets'],
-                result['jump_distance'],
-                result['ferro_fibrous'],
-                result['armor_mass'],
-                result['armor_factor'],
-                result['heat_sinks'],
-                result['dbl_heat_sinks'],
-                result['w_and_e'])
+                _id=result['_id'],
+                model=result['model'],
+                name=result['name'],
+                mass=result['mass'],
+                endo_steel=result['endo_steel'],
+                power_plant=result['power_plant'],
+                xl=result['xl'],
+                walking_speed=result['walking_speed'],
+                running_speed=result['running_speed'],
+                jump_jets=result['jump_jets'],
+                jump_distance=result['jump_distance'],
+                ferro_fibrous=result['ferro_fibrous'],
+                armor_mass=result['armor_mass'],
+                armor_factor=result['armor_factor'],
+                heat_sinks=result['heat_sinks'],
+                dbl_heat_sinks=result['dbl_heat_sinks'],
+                w_and_e=result['w_and_e'])
             print("\n...Base Mech construction successful...")
 
             print("\n...Beginning weapon and equipment construction...")
             wIDs = playerMech.getWandE()
-            btf.printDict(wIDs)
+            # btf.printDict(wIDs)
             newWeapons = btf.objectifyByID(wIDs,wdata)
-            btf.printDict(newWeapons)
-
+            # btf.printDict(newWeapons)
+            playerMech.setWandE(newWeapons)
+            count = 1
+            for key, value in playerMech.getWandE().items():
+                for item in value:
+                    print("{}) {}".format(count,item.getName()))
+                    count+=1
             found = True
             valid = False
     if found is not True:
