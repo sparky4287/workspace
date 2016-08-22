@@ -99,10 +99,7 @@ class Mech(object):
         power_plant = ("Standard", "XL")[self.getXL()]
         heat_sinks = (str(self.getHeatSinks()), str(self.getHeatSinks()) + "(" + str(self.getHeatSinks()*2) + ")")[self.getDblHeatSinks()]
 
-        return "\n*******************************" + \
-            "\n*         Mech Stats          *" + \
-            "\n*******************************" + \
-            "\nType:\t\t" + self.getModel() + " " + self.getName().title() + \
+        return "\nType:\t\t" + self.getModel() + " " + self.getName().title() + \
             "\nMass:\t\t" + str(self.getMass()) + " tons" + \
             "\nChassis:\t" + ferro_fibrous + \
             "\nPower Plant:\t" + str(self.getPowerPlant()) + " " + power_plant + \
