@@ -4,7 +4,7 @@ from weapons import Weapon
 import bt_functions as btf
 
 mech_file_dir = "mechdata.json"
-wande_file_dir = "weapons.json"
+wande_file_dir = "weaponsdata.json"
 valid = True
 found = False
 count = 0

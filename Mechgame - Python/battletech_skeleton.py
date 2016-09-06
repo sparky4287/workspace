@@ -1,15 +1,22 @@
 import effectsLib as elib
+import team_create as tc
+import pprint
 
-class Team:
-	def __init__(self, name, members, initiative_order=0, active=True):
-		self.name = name
-		self.members = members
-		self.initiative_order = initiative_order
-		self.active = active
-
+pp = pprint.PrettyPrinter()
 turn_order = {}
-t1 = Team('t1', {1:'a',2:'b',3:'c',4:'d'})
-t2 = Team('t2', {1:'e',2:'f',3:'g',4:'h'})
+
+# Team Creation
+print("\n...CREATE TEAM 1...")
+t1 = tc.create_team('t1',8)
+
+pp.pprint(t1)
+pp.pprint(t1.members)
+pp.pprint(t1.members[1]['pilot'])
+pp.pprint(t1.members[1]['mech'])
+
+print("\n...CREATE TEAM 2...")
+t2 = tc.create_team('t2',8)
+
 total_number_of_units = len(t1.members) + len(t2.members)
 
 while True:
@@ -21,9 +28,7 @@ while True:
 
 	while t1.initiative_order == t2.initiative_order:
 		t1.initiative_order = elib.roll2D6()
-		# print(t1.initiative_order)
 		t2.initiative_order = elib.roll2D6()
-		# print(t2.initiative_order)
 
 	if t1.initiative_order < t2.initiative_order:
 		turn_order = {1:t1, 2:t2}
@@ -34,28 +39,38 @@ while True:
 	print("1) {} (Rolled a {})".format(turn_order[1].name, turn_order[1].initiative_order))
 	print("2) {} (Rolled a {})".format(turn_order[2].name, turn_order[2].initiative_order))
 
-	a = tuple(turn_order[1].members.items())
-	b = tuple(turn_order[2].members.items())
+	a = turn_order[1].members
+	b = turn_order[2].members
+
 	unit_order = []
 	count = 0
 
 	while total_number_of_units > 0:
-		unit_order.append(a[count])
-		unit_order.append(b[count])
+		decrement = 0
+		try:
+			if a[count]:
+				unit_order.append(a[count])
+				decrement += 1
+		except IndexError:
+			print("A end of list")
+		try:
+			if b[count]:
+				unit_order.append(b[count])
+				decrement += 1
+		except IndexError:
+			print("B end of list")
 		count += 1
-		total_number_of_units -= len(turn_order)
-
-	# print(unit_order)
+		total_number_of_units -= decrement
 
 	# Movement Phase
 	print("\n...MOVEMENT PHASE...")
-	for _id, item in unit_order:
-		print("{} moves!".format(item))
+	for item in unit_order:
+		print("{} moves!".format(item.name))
 
 	# Weapon Attack Phase
 	print("\n...WEAPON ATTACK PHASE...")
-	for _id, item in unit_order:
-		print("{} fires!".format(item))
+	for item in unit_order:
+		print("{} fires!".format(item.name))
 
 	# Turn End
 	print("\n...END TURN...")

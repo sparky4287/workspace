@@ -91,7 +91,7 @@ class Mech(object):
     def getWandE(self):
         return self.w_and_e
 
-    def __str__(self):
+    def __repr__(self):
 
         # Grab values through tuple implementation
         ferro_fibrous = ("Standard", "Ferro Fibrous")[self.getFerroFibrous()]

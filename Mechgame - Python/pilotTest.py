@@ -1,4 +1,4 @@
-import pickle as p
+import simplejson as json
 
 data = {
 	'pilots': {
@@ -75,29 +75,5 @@ data = {
 	}
 }
 
-with open('pilots.pickle', 'wb') as w:
-	p.dump(data, w, p.HIGHEST_PROTOCOL)
-	
-# with open('pilots.pickle', 'rb') as r:
-# 	p_data = p.load(r)
-
-# pilot_data	= p_data['pilots']
-# ranks 		= p_data['ranks']
-		
-# pilot_list = []
-# limit = 8
-# while limit > 0:
-# 	for key, value in pilot_data.items():
-# 		print("{})".format(key))
-# 		print("Name:     {} ({})".format(value['name'], ranks[value['rank']]))
-# 		print("Piloting: {}".format(value['pSkill']))
-# 		print("Gunnery:  {}".format(value['gSkill']))
-# 	pilot_choice = int(input("Choose pilot: "))
-# 	pilot_list.append(pilot_data[pilot_choice])
-# 	limit -= pilot_data[pilot_choice]['rank']
-# 	del pilot_data[pilot_choice]
-# 	for key, value in list(pilot_data.items()):
-# 		if value['rank'] > limit:
-# 			del pilot_data[key]
-# 	print(pilot_list)
-# 	print(pilot_data)
+with open('pilots.json', 'wb') as pilots_file:
+    json.dump(data, pilots_file)
