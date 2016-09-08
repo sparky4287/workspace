@@ -7,7 +7,7 @@ def create_mech():
 
     # Load data from JSON files
     mech_file_dir = "mechdata.json"
-    weapons_file_dir = "weapons.json"
+    weapons_file_dir = "weaponsdata.json"
     with open(mech_file_dir) as mech_file:
         mdata = json.load(mech_file)
     with open(weapons_file_dir) as weapon_file:

@@ -42,6 +42,9 @@ while True:
 	a = turn_order[1].members
 	b = turn_order[2].members
 
+	print(len(a))
+	print(len(b))
+
 	unit_order = []
 	count = 0
 
