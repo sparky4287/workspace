@@ -33,9 +33,9 @@ def create_team(tname,limit):
 			pdata[pilot_choice]['description']
 		)
 		mech = mech_create.create_mech()
-		member_dict.update({count: {'pilot': pilot, 'mech': mech}})
+		member_dict.update({count: {'pilot': pilot, 'mech': mech, 'active': True}})
 		# member_list.append(pilot)
-		print(member_dict)
+		# print(member_dict)
 		limit -= pilot.rank
 		del pdata[pilot_choice]
 		sorted_keys.remove(pilot_choice)
