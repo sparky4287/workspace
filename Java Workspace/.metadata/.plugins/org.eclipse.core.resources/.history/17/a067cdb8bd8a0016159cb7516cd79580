@@ -1,0 +1,14 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Alien extends Opponent {
+	
+	private int size, color, constant;
+	
+	Random randomInteger = new Random();
+	
+	public Alien() {
+		size = 20+randomInteger.nextInt(50);
+	}
+}

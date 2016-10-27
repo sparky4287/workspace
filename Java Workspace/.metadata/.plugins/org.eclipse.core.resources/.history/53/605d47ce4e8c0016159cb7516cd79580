@@ -1,0 +1,21 @@
+package com.mycompany.a1;
+
+public class Astronaut extends Opponent {
+
+	private int constant, health, speed;
+	
+	public Astronaut() {
+		constant = 1;
+		health = 5;
+		speed = health * constant;
+	}
+	
+	public int getHealth() {
+		return health;
+	}
+	
+	public void setHealth(int newHealth) {
+		health = newHealth;
+		speed = health * constant;
+	}
+}

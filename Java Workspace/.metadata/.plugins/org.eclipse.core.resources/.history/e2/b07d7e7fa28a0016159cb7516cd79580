@@ -1,0 +1,59 @@
+package com.mycompany.a1;
+
+import com.codename1.charts.util.ColorUtil;
+
+public abstract class GameObject {
+
+	private double locationX, locationY;
+	private int size;
+	private String center;
+	/*protected int color;*/
+	
+	public GameObject() {
+		locationX = 0.0;
+		locationY = 0.0;
+		setCenter(locationX, locationY);
+	}
+	
+	public double getLocationX() {
+		return locationX;
+	}
+	public double getLocationY() {
+		return locationY;
+	}
+	public String getCenter() {
+		return center;
+	}
+	/*public String getLocation() {
+		String location = "(" + this.getLocationX() + "," + this.getLocationY() + ")"; 
+		return location;
+	}*/
+	public int getSize() {
+		return size;
+	}
+	/*public int getColor() {
+		return color;
+	}*/
+
+	public void setLocationX(double newLocationX) {
+		if(newLocationX >= 0.0 && newLocationX <= 1024.0) {
+			locationX = newLocationX;
+		}
+	}
+	public void setLocationY(double newLocationY) {
+		if(newLocationY >= 0.0 && newLocationY <= 768.0) {
+			locationY = newLocationY;
+		}
+	}
+	public void setCenter(double newLocationX, double newLocationY) {
+		setLocationX(newLocationX);
+		setLocationY(newLocationY);
+		center = "("+String.valueOf(locationX)+","+String.valueOf(locationY)+")";
+	}
+	public void setSize(int newSize) {
+		size = newSize;
+	}
+	/*public void setColor(int newColor) {
+		color = newColor;
+	}*/
+}

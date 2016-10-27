@@ -1,0 +1,49 @@
+package com.mycompany.a1;
+
+import java.util.Vector;
+
+public class GameCollection implements ICollection {
+	
+	private Vector theCollection;
+	
+	public GameCollection() {
+		theCollection = new Vector();
+	}
+	
+	public void add(Object newObject) {
+		theCollection.addElement(newObject);
+	}
+	
+	public IIterator getIterator() {
+		return new GameVectorIterator();
+	}
+	
+	public int size() {
+		return theCollection.size();
+	}
+	
+	public Object get(int index) {
+		return theCollection.get(index);
+	}
+	
+	private class GameVectorIterator implements IIterator {
+		private int currElementIndex;
+		
+		public GameVectorIterator() {
+			currElementIndex = -1;
+		}
+		
+		public boolean hasNext() {
+			if(theCollection.size() <= 0)
+				return false;
+			if(currElementIndex == theCollection.size() - 1)
+				return false;
+			return true;
+		}
+		
+		public Object getNext() {
+			currElementIndex++;
+			return(theCollection.elementAt(currElementIndex));
+		}
+	}
+}

@@ -1,0 +1,53 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+abstract public class GameObject {
+
+	private Random rand = new Random();
+	private double locationX, locationY;
+	protected int size, color;
+	private String center;
+	
+	public GameObject() {
+		locationX = Double.valueOf(rand.nextInt(1024));
+		locationY = Double.valueOf(rand.nextInt(768));
+		center = "("+String.valueOf(locationX)+","+String.valueOf(locationY)+")";
+	}
+	
+	public double getLocationX() {
+		return locationX;
+	}
+	public double getLocationY() {
+		return locationY;
+	}
+	public int getSize() {
+		return size;
+	}
+	public int getColor() {
+		return color;
+	}
+	public String getCenter() {
+		return center;
+	}
+	
+	public void setLocationX(double newLocationX) {
+		if(newLocationX >= 0.0 && newLocationX <= 1024.0) {
+			locationX = newLocationX;
+		}
+	}
+	public void setLocationY(double newLocationY) {
+		if(newLocationY >= 0.0 && newLocationY <= 768.0) {
+			locationY = newLocationY;
+		}
+	}
+	//abstract public void setSize(int newSize);
+	public void setColor(int newColor) {
+		color = newColor;
+	}
+	public void setCenter(double newLocationX, double newLocationY) {
+		setLocationX(newLocationX);
+		setLocationY(newLocationY);
+		center = "("+String.valueOf(locationX)+","+String.valueOf(locationY)+")";
+	}
+}

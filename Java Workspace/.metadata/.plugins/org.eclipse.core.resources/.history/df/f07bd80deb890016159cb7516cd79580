@@ -1,0 +1,37 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Alien extends GameObject {
+	
+	private int speed, direction;
+	
+	Random randomInteger = new Random();
+	
+	public Alien() {
+		size = 20+randomInteger.nextInt(50);
+		direction = randomInteger.nextInt(359);
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public int getDirection() {
+		return direction;
+	}
+	
+	/*public void setSize(int newSize) {
+		if(newSize <= 50 && newSize >= 20) {
+			size = newSize;
+		}
+	}*/
+	public void setSpeed(int newSpeed) {
+		speed = newSpeed;
+	}
+	public void setDirection(int newDirection) {
+		direction = newDirection;
+	}
+}

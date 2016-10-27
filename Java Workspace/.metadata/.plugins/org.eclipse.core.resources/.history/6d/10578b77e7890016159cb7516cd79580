@@ -1,0 +1,49 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public abstract class GameObject {
+
+	protected double locationX, locationY;
+	protected int size, color;
+	Random ranInt = new Random();
+	
+	public GameObject() {
+		locationX = 0.0;
+		locationY = 0.0;
+	}
+	
+	public double getLocationX() {
+		return locationX;
+	}
+	public double getLocationY() {
+		return locationY;
+	}
+	public String getLocation() {
+		String location = "(" + getLocationX() + "," + getLocationY() + ")"; 
+		return location;
+	}
+	public int getSize() {
+		return size;
+	}
+	public int getColor() {
+		return color;
+	}
+
+	public void setLocationX(double newLocationX) {
+		if(newLocationX >= 0.0 && newLocationX <= 1024.0) {
+			locationX = newLocationX;
+		}
+	}
+	public void setLocationY(double newLocationY) {
+		if(newLocationY >= 0.0 && newLocationY <= 768.0) {
+			locationY = newLocationY;
+		}
+	}
+	public void setSize(int newSize) {
+		size = newSize;
+	}
+	public void setColor(int newColor) {
+		color = newColor;
+	}
+}

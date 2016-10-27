@@ -1,0 +1,27 @@
+package com.mycompany.a1;
+
+public abstract class GameObject {
+
+	private int location;
+	protected int size;
+	
+	public GameObject() {
+		location = 0;
+	}
+	
+	public int getLocation() {
+		return location;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+
+	public void setLocation(int newLocation) {
+		location = newLocation;
+	}
+	
+	public void setSize(int newSize) {
+		location = newSize;
+	}
+}

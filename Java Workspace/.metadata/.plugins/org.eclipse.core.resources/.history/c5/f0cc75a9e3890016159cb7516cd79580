@@ -1,0 +1,18 @@
+package com.mycompany.a1;
+
+public abstract class GameObject {
+
+	private int location;
+	
+	public GameObject() {
+		location = 0;
+	}
+	
+	public int getLocation() {
+		return location;
+	}
+
+	public void setLocation(int newLocation) {
+		location = newLocation;
+	}
+}

@@ -1,0 +1,94 @@
+package com.mycompany.a1;
+
+import com.codename1.ui.Form;
+import com.codename1.ui.Label;
+import com.codename1.ui.TextField;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
+
+public class Game extends Form {
+	private GameWorld gw;
+	
+	public Game() {
+		gw = new GameWorld();
+		gw.init();
+		play();
+	}
+	
+	private void play() {
+		Label myLabel = new Label("Enter a command: ");
+		this.addComponent(myLabel);
+		final TextField myTextField = new TextField();
+		this.addComponent(myTextField);
+		this.show();
+		
+		myTextField.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent evt) {
+				
+				String sCommand = myTextField.getText().toString();
+				myTextField.clear();
+				switch(sCommand.charAt(0)) {
+					case 'a':
+						gw.jumpToLocation();
+						break;
+					case 'o':
+						gw.jumpToLocation();
+						break;
+					case 'r':
+						gw.moveRight();
+						break;
+					case 'l':
+						gw.moveLeft();
+						break;
+					case 'u':
+						gw.moveUp();
+						break;
+					case 'd':
+						gw.moveDown();
+						break;
+					case 'e':
+						gw.expand();
+						break;
+					case 'c':
+						gw.contract();
+						break;
+					case 't':
+						break;
+					case 's':
+						break;
+					case 'w':
+						break;
+					case 'f':
+						break;
+					case 'p':
+						gw.printPoints();
+						break;
+					case 'm':
+						gw.printMap();
+						break;
+					case 'x':
+						gw.exit();
+						break;
+					case 'y':
+						gw.yes();
+						break;
+					case 'n':
+						gw.no();
+						break;
+					case '1':
+						gw.displayCollection();
+					case '2':
+						gw.displayAstronauts();
+					case '3':
+						gw.displayAliens();
+					case '4':
+						gw.displaySpaceship();
+					default:
+						break;
+				} // switch
+			} // actionPerformed
+		} // new ActionListener()
+		); // addActionListener
+	} // play
+}

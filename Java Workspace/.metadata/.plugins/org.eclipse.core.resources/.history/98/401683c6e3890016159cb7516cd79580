@@ -1,0 +1,23 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Spaceship extends GameObject {
+
+	private int size;
+	Random ranInt = new Random();
+	
+	public Spaceship() {
+		size = 100;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+	public void setSize(int newSize) {
+		if(newSize <= 1024 && newSize >= 50) {
+			size = newSize;
+		}
+	}
+}

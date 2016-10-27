@@ -1,0 +1,20 @@
+package com.mycompany.a1;
+
+import java.util.Vector;
+
+public class GameCollection {
+	
+	private Vector theCollection;
+	
+	public GameCollection() {
+		theCollection = new Vector();
+	}
+	
+	public void add(GameObject newObject) {
+		theCollection.addElement(newObject);
+	}
+	
+	public Vector getObjects() {
+		return theCollection;
+	}
+}

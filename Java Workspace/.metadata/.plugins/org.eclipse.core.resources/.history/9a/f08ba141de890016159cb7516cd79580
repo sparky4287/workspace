@@ -1,0 +1,96 @@
+package com.mycompany.a1;
+
+public class GameWorld {
+	
+	private int width, height;
+	
+	public GameWorld() {
+		width = 1024;
+		height = 768;
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+	
+	public int getHeight() {
+		return height;
+	}
+	
+	public void setWidth(int newWidth) {
+		width = newWidth;
+	}
+	
+	public void setHeight(int newHeight) {
+		height = newHeight;
+	}
+
+	public void init() {
+		
+	}
+
+	public void expand() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void no() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void yes() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void exit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printMap() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printPoints() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void contract() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveDown() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveLeft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveRight() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveToAstronaut() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveToAlien() {
+		// TODO Auto-generated method stub
+		
+	}
+}

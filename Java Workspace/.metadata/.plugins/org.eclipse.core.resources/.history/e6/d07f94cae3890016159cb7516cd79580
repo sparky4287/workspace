@@ -1,0 +1,23 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Alien extends GameObject {
+	
+	/*private int size;*/
+	Random randomInteger = new Random();
+	
+	public Alien() {
+		size = 20+randomInteger.nextInt(50);
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+	public void setSize(int newSize) {
+		if(newSize <= 50 && newSize >= 20) {
+			size = newSize;
+		}
+	}
+}

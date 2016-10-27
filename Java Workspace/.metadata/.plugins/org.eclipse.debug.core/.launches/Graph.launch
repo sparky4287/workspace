@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/CSC 130 Assignment 4/CSC130/src/edu/csus/csc130/assignment4/Graph.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="CSC130.src.edu.csus.csc130.assignment4.Graph"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CSC 130 Assignment 4"/>
+</launchConfiguration>

@@ -1,0 +1,12 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Alien extends GameObject {
+	
+	Random ranInt = new Random();
+	
+	public Alien() {
+
+	}
+}

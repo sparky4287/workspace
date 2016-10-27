@@ -1,0 +1,18 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+import com.codename1.charts.util.ColorUtil;
+
+public class Alien extends Opponent {
+	
+	private int size, constant;
+	
+	Random randomInteger = new Random();
+	
+	public Alien() {
+		size = 20+randomInteger.nextInt(50);
+		constant = 1;
+		setSpeed(5 * constant);
+		color = ColorUtil.GREEN;
+	}
+}

@@ -1,0 +1,35 @@
+package com.mycompany.a1;
+
+import com.codename1.charts.util.ColorUtil;
+
+public class Astronaut extends Opponent {
+
+	private int constant, health, speed;
+	
+	public Astronaut() {
+		setColor(ColorUtil.BLUE);
+		constant = 1;
+		health = 5;
+		speed = health * constant;
+	}
+	
+	public int getHealth() {
+		return health;
+	}
+	
+	public void setHealth(int newHealth) {
+		health = newHealth;
+		speed = health * constant;
+	}
+	
+	public String toString() {
+		return "Astronaut: loc=" + getLocation() +
+			" color=[" + ColorUtil.red(color) + "," + 
+				ColorUtil.green(color) + "," + 
+				ColorUtil.blue(color) +
+			"] size=" + getSize() +
+			" speed=" + getSpeed() +
+			" dir=" + getDirection() + 
+			" health" + getHealth();
+	}
+}

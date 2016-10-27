@@ -1,0 +1,24 @@
+package com.mycompany.a1;
+
+public abstract class Rescuer extends GameObject implements IGuided {
+	
+	public Rescuer() {
+		
+	}
+	
+	public void moveLeft() {
+		
+	}
+	public void moveRight() {
+		
+	}
+	public void moveUp() {
+		
+	}
+	public void moveDown() {
+		
+	}
+	public void jumpToLocation() {
+		
+	}
+}

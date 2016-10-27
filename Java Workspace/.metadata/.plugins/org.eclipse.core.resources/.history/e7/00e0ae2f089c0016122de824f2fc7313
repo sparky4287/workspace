@@ -1,0 +1,128 @@
+package com.mycompany.a1;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class GameWorld {
+	
+	private int width, height;
+	private GameCollection theGameCollection;
+	private Random randomInteger = new Random();
+	
+	public void init() {
+		width = 1024;
+		height = 768;
+		
+		theGameCollection = new GameCollection();
+		
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Spaceship());
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	
+	public void setWidth(int newWidth) {
+		width = newWidth;
+	}
+	public void setHeight(int newHeight) {
+		height = newHeight;
+	}
+
+	public void expand() {
+		// TODO Auto-generated method stub
+		System.out.println("Expand");
+	}
+	public void no() {
+		// TODO Auto-generated method stub
+		System.out.println("No");
+	}
+	public void yes() {
+		// TODO Auto-generated method stub
+		System.out.println("Yes");
+	}
+	public void exit() {
+		// TODO Auto-generated method stub
+		System.out.println("Exit");
+	}
+	public void printMap() {
+		IIterator theElements = theGameCollection.getIterator();
+		while(theElements.hasNext()) {
+			GameObject gob = (GameObject) theElements.getNext();
+			System.out.println(gob);
+		}
+	}
+	public void printPoints() {
+		// TODO Auto-generated method stub
+		System.out.println("Print Points");
+	}
+	public void contract() {
+		// TODO Auto-generated method stub
+		System.out.println("Contract");
+	}
+	public void moveDown() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Down");
+	}
+	public void moveUp() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Up");
+	}
+	public void moveLeft() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Left");
+	}
+	public void moveRight() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Right");
+	}
+	public void jumpToLocation(String x) {
+		
+		/* WORKING */
+		ArrayList<Object> temp_array = new ArrayList<Object>();
+		ArrayList<Object> spaceship_arr = new ArrayList<Object>(1);
+		int temp_size = theGameCollection.size()-1;
+		if(x.equals("alien")) {
+			while(temp_size != 0) {
+				if(theGameCollection.get(temp_size) instanceof Alien) {
+					temp_array.add(theGameCollection.get(temp_size));
+				} else if(theGameCollection.get(temp_size) instanceof Spaceship) {
+					spaceship_arr.add(theGameCollection.get(temp_size));
+				}
+				temp_size -= 1;
+			}
+			int id = randomInteger.nextInt(temp_array.size());
+			Alien target = (Alien) temp_array.get(id);
+			Spaceship spaceship = (Spaceship) spaceship_arr.get(0);
+			System.out.println(spaceship.getLocation());
+			spaceship.setLocation(target.getLocationX(), target.getLocationY());
+			System.out.println(spaceship.getLocation());
+			
+		} else if(x.equals("astronaut")) {
+			while(temp_size != 0) {
+				if(theGameCollection.get(temp_size) instanceof Astronaut) {
+					temp_array.add(theGameCollection.get(temp_size));
+				} else if(theGameCollection.get(temp_size) instanceof Spaceship) {
+					spaceship_arr.add(theGameCollection.get(temp_size));
+				}
+				temp_size -= 1;
+			}
+			int id = randomInteger.nextInt(temp_array.size());
+			Astronaut target = (Astronaut) temp_array.get(id);
+			Spaceship spaceship = (Spaceship) spaceship_arr.get(0);
+			System.out.println(spaceship.getLocation());
+			spaceship.setLocation(target.getLocationX(), target.getLocationY());
+			System.out.println(spaceship.getLocation());
+		}
+	}
+}

@@ -1,0 +1,128 @@
+package com.mycompany.a1;
+
+public class GameWorld {
+	
+	private int width, height;
+	private GameCollection theGameCollection;
+	
+	public void init() {
+		width = 1024;
+		height = 768;
+		
+		theGameCollection = new GameCollection();
+		
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Astronaut());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Alien());
+		theGameCollection.add(new Spaceship());
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	
+	public void setWidth(int newWidth) {
+		width = newWidth;
+	}
+	public void setHeight(int newHeight) {
+		height = newHeight;
+	}
+
+	public void expand() {
+		// TODO Auto-generated method stub
+		System.out.println("Expand");
+	}
+
+	public void no() {
+		// TODO Auto-generated method stub
+		System.out.println("No");
+	}
+
+	public void yes() {
+		// TODO Auto-generated method stub
+		System.out.println("Yes");
+	}
+
+	public void exit() {
+		// TODO Auto-generated method stub
+		System.out.println("Exit");
+	}
+
+	public void printMap() {
+		// TODO Auto-generated method stub
+		System.out.println("Print Map");
+	}
+
+	public void printPoints() {
+		// TODO Auto-generated method stub
+		System.out.println("Print Points");
+	}
+
+	public void contract() {
+		// TODO Auto-generated method stub
+		System.out.println("Contract");
+	}
+
+	public void moveDown() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Down");
+	}
+
+	public void moveUp() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Up");
+	}
+
+	public void moveLeft() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Left");
+	}
+
+	public void moveRight() {
+		// TODO Auto-generated method stub
+		System.out.println("Move Right");
+	}
+
+	public void jumpToLocation() {
+		// TODO Auto-generated method stub
+		System.out.println("Jump to Location");
+	}
+	
+	public void displayCollection() {
+		IIterator theElements = theGameCollection.getIterator();
+		while(theElements.hasNext()) {
+			GameObject gob = (GameObject) theElements.getNext();
+			System.out.println(gob);
+		}
+	}
+	public void displayAstronauts() {
+		IIterator theElements = theGameCollection.getIterator();
+		while(theElements.hasNext()) {
+			GameObject gob = (GameObject) theElements.getNext();
+			if(gob instanceof Astronaut) {
+				System.out.println(gob.getClass());
+			}
+		}
+	}
+	public void displayAliens() {
+		IIterator theElements = theGameCollection.getIterator();
+		while(theElements.hasNext()) {
+			GameObject gob = (GameObject) theElements.getNext();
+			System.out.println(gob);
+		}
+	}
+	public void displaySpaceship() {
+		IIterator theElements = theGameCollection.getIterator();
+		while(theElements.hasNext()) {
+			GameObject gob = (GameObject) theElements.getNext();
+			System.out.println(gob);
+		}
+	}
+}

@@ -1,0 +1,22 @@
+package com.mycompany.a1;
+
+import java.util.Random;
+
+public class Spaceship extends Rescuer {
+
+	private Random ranInt = new Random();
+	
+	public Spaceship() {
+		setSize(100);
+	}
+	
+	public void setSize(int newSize) {
+		if(newSize <= 1024 && newSize >= 50) {
+			setSize(newSize);
+		}
+	}
+	
+	public void move() {
+		
+	}
+}
